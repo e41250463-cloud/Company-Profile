@@ -1,0 +1,294 @@
+<style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+
+    /* NAVBAR */
+    .navbar {
+        background-color: #d50000;
+        color: white;
+        padding: 10px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-logo { display: flex; align-items: center; gap: 12px; }
+    .navbar img { width: 45px; }
+    .navbar-menu a {
+        color: white;
+        margin-left: 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .navbar-menu a:hover { text-decoration: underline; }
+
+    /* TITLE */
+    .title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    .subtitle {
+        text-align: center;
+        margin-top: 5px;
+        color: #555;
+    }
+
+    /* CONTACT FORM + BUTTONS */
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px; 
+        flex-wrap: wrap;
+    }
+    .form-box, .wa-box {
+        background: white; 
+        padding: 25px;
+        border-radius: 10px;
+        width: 320px;
+        box-shadow: 
+        0 8px 15px rgba(0, 0, 0, 0.25);  /* Bayangan kedua untuk kedalaman */
+    }
+    input, textarea {
+        width: 90%;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    textarea { height: 100px; resize: none; }
+    .submit-btn {
+        background: #ff0000;
+        color: white;  /* Border samar */
+        border: none;
+        width: 100%;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .wa-btn {
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+        padding: 12px;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        text-align: left;
+        cursor: pointer;
+    }
+    .wa-img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    /* HUBUNGI KAMI SECTION */
+    .hubungi-section {
+        text-align: center;
+        margin-top: 50px;     
+    }
+    .hubungi-container {
+        margin-top: 20px 30px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+         width: 100%;
+       display: flex;
+        align-items: center;    
+       padding: 30px;
+        
+    }
+    .hubungi-text {
+        width: 350px;
+        text-align: left;
+        font-size: 15px;
+        color: #555;
+    }
+    .map-container {
+        box-shadow: #555;
+        border: #555;
+    }
+ 
+/* footer */
+
+ footer {
+            width: 100%;
+            background: url('biosains.polije.2.png') center / cover no-repeat;
+            background-color: #ff0000;
+            color: white;
+            position: relative;
+            padding: 50px 0;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        /* Overlay merah semi-transparan */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.65); /* Opasitas lebih tinggi */
+            z-index: 1;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 3000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            z-index: 2;
+            position: relative;
+            flex-wrap: wrap; /* Agar responsif */
+        }
+
+        .footer-col {
+            flex: 1;
+            padding: 0 15px;
+            min-width: 280px; /* Disesuaikan agar lebih rata */
+        }
+
+        /* Kolom 1: Kontak */
+        .logo-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            width: 45px;
+            height: 45px;
+            margin-right: 15px;
+        }
+
+        .brand-footer .title-footer {
+            display: block;
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 1.2;
+        }
+
+        .brand-footer .subtitle-footer {
+            font-size: 0.85em;
+            line-height: 1.2;
+        }
+
+        .contact-info {
+            font-style: normal;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .col-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+
+        .footer-col.links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col.links a {
+            color: white;
+            text-decoration: none;
+            line-height: 2;
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .footer-col.links a:hover {
+            color: #ffcc00;
+        }
+
+
+        .footer-col.kritik p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        /* -------------------- 4. Media Query / Responsif -------------------- */
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+                height: auto;
+            }
+            
+            body {
+                padding-top: 150px; /* Sesuaikan padding agar konten tidak tertutup navbar yang lebih tinggi */
+            }
+
+            .navbar-menu {
+                flex-direction: column; /* Menu ditumpuk vertikal */
+                width: 100%;
+                gap: 5px; /* Kurangi jarak vertikal */
+                margin-top: 15px;
+                margin-left: 0;
+            }
+            
+            .navbar-menu a {
+                padding: 5px 0; /* Beri sedikit padding untuk area klik */
+            }
+            
+            .dropdown-menu {
+                position: static; /* Dropdown menjadi bagian dari aliran dokumen */
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                background: #c20000; /* Warna yang sedikit lebih gelap */
+                border-radius: 0;
+                padding: 0;
+                margin-top: 5px;
+                box-shadow: none;
+            }
+            
+            .dropdown-menu a {
+                padding-left: 30px; /* Sub-menu menjorok ke dalam */
+                font-size: 0.9em;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-col {
+                min-width: 90%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+
+            .footer-col:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+            
+            .logo-group {
+                justify-content: center;
+            }
+            
+            .footer-col.links ul {
+                padding: 0;
+            }
+        }
+</style>
